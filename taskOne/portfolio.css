@@ -1,0 +1,64 @@
+@import url("https://fonts.cdnfonts.com/css/noto-sans");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  padding-top: 120px;
+}
+.main-content .container {
+  width: 1296px;
+  margin: 0 auto;
+}
+.main-content .container .article-set {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.main-content .container .article-set .article-list {
+  max-width: 636px;
+  margin-bottom: 80px;
+}
+.main-content .container .article-set .article-list .article-img {
+  width: 100%;
+  display: block;
+  border: 1px solid #F1F1F1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.main-content .container .article-set .article-list .article-info {
+  padding: 0 16px;
+  font-family: "Noto Sans";
+}
+.main-content .container .article-set .article-list .article-info .article-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+.main-content .container .article-set .article-list .article-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #919191;
+  margin-bottom: 24px;
+}
+.main-content .container .article-set .article-list .article-info .tags-content {
+  display: flex;
+  list-style-type: none;
+}
+.main-content .container .article-set .article-list .article-info .tags-content .article-tags {
+  padding: 4px 12px;
+  margin-right: 16px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3B3B3B;
+  background-color: #F1F1F1;
+}/*# sourceMappingURL=portfolio.css.map */

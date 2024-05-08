@@ -1,0 +1,91 @@
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+
+$info-fontfamily: 'Noto Sans';
+
+$h3-fsize28: 28px;
+$h3-lineheight: 34px;
+$h3-weight700: 700;
+
+$p-fsize16: 16px;
+$p-color: #919191;
+$p-weight400: 400;
+$p-lineheight: 24px;
+
+$tags-fsize16: 16px;
+$tags-color: #3B3B3B;
+$tags-bg-color: #F1F1F1;
+$tags-weight400: 400;
+$tags-lineheight: 24px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  padding-top: 120px;
+
+  .container {
+    width: 1296px;
+    margin: 0 auto;
+
+    .article-set {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      list-style-type: none;
+
+      .article-list {
+        max-width: 636px;
+        margin-bottom: 80px;
+
+        .article-img {
+          width: 100%;
+          display: block;
+          border: 1px solid #F1F1F1;
+          border-radius: 8px;
+          margin-bottom: 16px;
+        }
+
+        .article-info {
+          padding: 0 16px;
+          font-family: $info-fontfamily;
+
+          .article-title {
+            font-size: $h3-fsize28;
+            font-weight: $h3-weight700;
+            line-height: $h3-lineheight;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: $p-fsize16;
+            font-weight: $p-weight400;
+            line-height: $p-lineheight;
+            color: $p-color;
+            margin-bottom: 24px;
+          }
+
+          .tags-content {
+            display: flex;
+            list-style-type: none;
+
+            .article-tags {
+              padding: 4px 12px;
+              margin-right: 16px;
+              border-radius: 16px;
+              font-size: $tags-fsize16;
+              font-weight: $tags-weight400;
+              line-height: $tags-lineheight;
+              color: $tags-color;
+              background-color: $tags-bg-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
