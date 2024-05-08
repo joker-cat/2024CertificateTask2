@@ -7,7 +7,8 @@
 }
 
 .index-page .container {
-  width: 1296px;
+  width: 100%;
+  max-width: 1296px;
   margin: 0 auto;
 }
 
@@ -48,8 +49,13 @@
   justify-content: space-between;
 
   .l-slogan {
-    padding: 248px 0;
-    padding-left: 312px;
+    width: 40%;
+    // padding: 248px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 24px;
 
     h2 {
       font-family: 'Noto Sans';
@@ -128,51 +134,63 @@
   }
 
   .r-salogn {
-    width: 1154px;
-    position: relative;
+    width: 60%;
 
-    .slogan-image {
-      width: 1060px;
-      position: absolute;
-      right: 0;
-    }
-
-    .bg-squareIcons {
-      position: absolute;
-      background-color: #b2b2b233;
-
-      &:nth-of-type(2) {
-        top: 121px;
-        left: 15px;
+    .r-salogn-content {
+      img {
+        width: 100%;
       }
 
-      &:nth-of-type(3) {
-        top: 219px;
-      }
-    }
+      // .slogan-image-position {
+      //   position: relative;
+      //   display: flex;
+      //   max-width: 1154px;
+      //   padding-bottom: 85px;
 
-    .bg-circleIcons {
-      position: absolute;
+      //   .slogan-image {
+      //     width: 100%;
+      //     max-width: 1060px;
+      //     margin-left: auto;
+      //   }
 
-      &:nth-of-type(4) {
-        top: 635px;
-        left: 419px;
-      }
+      //   .bg-squareIcons {
+      //     position: absolute;
+      //     background-color: #b2b2b233;
 
-      &:nth-of-type(5) {
-        top: 622px;
-        left: 376px;
-      }
+      //     &:nth-of-type(2) {
+      //       top: 121px;
+      //       left: 15px;
+      //     }
 
-      &:nth-of-type(6) {
-        top: 612px;
-        left: 1017px;
-      }
+      //     &:nth-of-type(3) {
+      //       top: 219px;
+      //     }
+      //   }
 
-      &:nth-of-type(7) {
-        top: 526px;
-        left: 1049px;
-      }
+      //   .bg-circleIcons {
+      //     position: absolute;
+
+      //     &:nth-of-type(4) {
+      //       bottom: 15px;
+      //       left: 28%;
+      //     }
+
+      //     &:nth-of-type(5) {
+      //       bottom: 65px;
+      //       left: 24%;
+      //     }
+
+      //     &:nth-of-type(6) {
+      //       bottom: 49px;
+      //       right: 0;
+      //     }
+
+      //     &:nth-of-type(7) {
+      //       right: 0;
+      //       bottom: 0;
+      //     }
+      //   }
+      // }
     }
   }
 }
@@ -260,19 +278,98 @@
     list-style-type: none;
 
     .list-li {
-      display: flex;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      &:nth-of-type(1){
-        background-image: url('./images/introduction1.jpg');
-      }
-      .list-image{
-        align-self: self-end;
+
+      .li-container {
+        // height: 800px;
+        display: flex;
+        justify-content: space-between;
+
+        .list-image {
+          max-width: 55%;
+          padding-top: 80px;
+          align-self: self-end;
+        }
+
+        .list-content {
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          width: 526px;
+          height: 400px;
+          padding: 80px 40px 56px;
+          border-radius: 24px 0px 0px 0px;
+          background-color: #ffffff1a;
+
+          >div {
+            border-bottom: 1px solid #f1f1f1;
+            margin-bottom: 40px;
+
+            .list-header {
+              font-family: 'Noto Sans';
+              color: #ffffff;
+              margin-bottom: 24px;
+
+              h4 {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 34px;
+                margin-bottom: 8px;
+              }
+
+              p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+
+        .list-tags {
+          display: flex;
+          justify-content: flex-start;
+          list-style-type: none;
+          margin-bottom: 40px;
+
+          li {
+            font-family: 'Noto Sans';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            background-color: #ffffff;
+            color: #3b3b3b;
+            padding: 4px 12px;
+            margin-right: 16px;
+            border-radius: 16px;
+          }
+        }
+
+
+        .full-introduction {
+          display: inline-block;
+          width: 176px;
+          padding: 16px 0;
+          margin: 0 auto;
+          background-color: #000;
+          border-radius: 5px;
+          border: none;
+
+          span {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            font-family: 'Noto Sans';
+          }
+
+        }
       }
 
-      .list-info{
-        display: flex;
+      &:nth-of-type(1) {
+        background-image: url('./images/introduction1.jpg');
       }
     }
   }

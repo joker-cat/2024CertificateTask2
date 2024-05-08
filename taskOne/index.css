@@ -7,7 +7,8 @@
 }
 
 .index-page .container {
-  width: 1296px;
+  width: 100%;
+  max-width: 1296px;
   margin: 0 auto;
 }
 
@@ -44,8 +45,12 @@
   justify-content: space-between;
 }
 .slogan .l-slogan {
-  padding: 248px 0;
-  padding-left: 312px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-right: 24px;
 }
 .slogan .l-slogan h2 {
   font-family: "Noto Sans";
@@ -110,43 +115,10 @@
   margin: auto;
 }
 .slogan .r-salogn {
-  width: 1154px;
-  position: relative;
+  width: 60%;
 }
-.slogan .r-salogn .slogan-image {
-  width: 1060px;
-  position: absolute;
-  right: 0;
-}
-.slogan .r-salogn .bg-squareIcons {
-  position: absolute;
-  background-color: rgba(178, 178, 178, 0.2);
-}
-.slogan .r-salogn .bg-squareIcons:nth-of-type(2) {
-  top: 121px;
-  left: 15px;
-}
-.slogan .r-salogn .bg-squareIcons:nth-of-type(3) {
-  top: 219px;
-}
-.slogan .r-salogn .bg-circleIcons {
-  position: absolute;
-}
-.slogan .r-salogn .bg-circleIcons:nth-of-type(4) {
-  top: 635px;
-  left: 419px;
-}
-.slogan .r-salogn .bg-circleIcons:nth-of-type(5) {
-  top: 622px;
-  left: 376px;
-}
-.slogan .r-salogn .bg-circleIcons:nth-of-type(6) {
-  top: 612px;
-  left: 1017px;
-}
-.slogan .r-salogn .bg-circleIcons:nth-of-type(7) {
-  top: 526px;
-  left: 1049px;
+.slogan .r-salogn .r-salogn-content img {
+  width: 100%;
 }
 
 .introduction {
@@ -221,17 +193,82 @@
   list-style-type: none;
 }
 .introduction .introduction-lists .list-li {
-  display: flex;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.introduction .introduction-lists .list-li:nth-of-type(1) {
-  background-image: url("./images/introduction1.jpg");
+.introduction .introduction-lists .list-li .li-container {
+  display: flex;
+  justify-content: space-between;
 }
-.introduction .introduction-lists .list-li .list-image {
+.introduction .introduction-lists .list-li .li-container .list-image {
+  max-width: 55%;
+  padding-top: 80px;
   align-self: self-end;
 }
-.introduction .introduction-lists .list-li .list-info {
+.introduction .introduction-lists .list-li .li-container .list-content {
+  align-self: center;
   display: flex;
+  flex-direction: column;
+  width: 526px;
+  height: 400px;
+  padding: 80px 40px 56px;
+  border-radius: 24px 0px 0px 0px;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+}
+.introduction .introduction-lists .list-li .li-container .list-content > div {
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 40px;
+}
+.introduction .introduction-lists .list-li .li-container .list-content > div .list-header {
+  font-family: "Noto Sans";
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.introduction .introduction-lists .list-li .li-container .list-content > div .list-header h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+.introduction .introduction-lists .list-li .li-container .list-content > div .list-header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.introduction .introduction-lists .list-li .li-container .list-tags {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+.introduction .introduction-lists .list-li .li-container .list-tags li {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #3b3b3b;
+  padding: 4px 12px;
+  margin-right: 16px;
+  border-radius: 16px;
+}
+.introduction .introduction-lists .list-li .li-container .full-introduction {
+  display: inline-block;
+  width: 176px;
+  padding: 16px 0;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 5px;
+  border: none;
+}
+.introduction .introduction-lists .list-li .li-container .full-introduction span {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Noto Sans";
+}
+.introduction .introduction-lists .list-li:nth-of-type(1) {
+  background-image: url("./images/introduction1.jpg");
 }/*# sourceMappingURL=index.css.map */
