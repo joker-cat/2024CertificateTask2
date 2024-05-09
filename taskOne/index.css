@@ -197,16 +197,16 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.introduction .introduction-lists .list-li .li-container {
+.introduction .introduction-lists .list-li.one .li-container {
   display: flex;
   justify-content: space-between;
 }
-.introduction .introduction-lists .list-li .li-container .list-image {
+.introduction .introduction-lists .list-li.one .li-container .list-image {
   max-width: 55%;
   padding-top: 80px;
   align-self: self-end;
 }
-.introduction .introduction-lists .list-li .li-container .list-content {
+.introduction .introduction-lists .list-li.one .li-container .list-content {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -216,33 +216,33 @@
   border-radius: 24px 0px 0px 0px;
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
-.introduction .introduction-lists .list-li .li-container .list-content > div {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div {
   border-bottom: 1px solid #f1f1f1;
   margin-bottom: 40px;
 }
-.introduction .introduction-lists .list-li .li-container .list-content > div .list-header {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div .list-header {
   font-family: "Noto Sans";
   color: #ffffff;
   margin-bottom: 24px;
 }
-.introduction .introduction-lists .list-li .li-container .list-content > div .list-header h4 {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div .list-header h4 {
   font-size: 28px;
   font-weight: 700;
   line-height: 34px;
   margin-bottom: 8px;
 }
-.introduction .introduction-lists .list-li .li-container .list-content > div .list-header p {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div .list-header p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
-.introduction .introduction-lists .list-li .li-container .list-tags {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div .list-tags {
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
   margin-bottom: 40px;
 }
-.introduction .introduction-lists .list-li .li-container .list-tags li {
+.introduction .introduction-lists .list-li.one .li-container .list-content > div .list-tags li {
   font-family: "Noto Sans";
   font-size: 16px;
   font-weight: 400;
@@ -253,7 +253,7 @@
   margin-right: 16px;
   border-radius: 16px;
 }
-.introduction .introduction-lists .list-li .li-container .full-introduction {
+.introduction .introduction-lists .list-li.one .li-container .list-content .full-introduction {
   display: inline-block;
   width: 176px;
   padding: 16px 0;
@@ -262,7 +262,160 @@
   border-radius: 5px;
   border: none;
 }
-.introduction .introduction-lists .list-li .li-container .full-introduction span {
+.introduction .introduction-lists .list-li.one .li-container .list-content .full-introduction span {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Noto Sans";
+}
+.introduction .introduction-lists .list-li.two {
+  position: relative;
+}
+.introduction .introduction-lists .list-li.two::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(10, 16, 19, 0.5019607843);
+}
+.introduction .introduction-lists .list-li.two .li-container {
+  position: relative;
+  z-index: 2;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content {
+  padding: 200px 0;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content {
+  display: flex;
+  flex-direction: column;
+  width: 526px;
+  height: 400px;
+  padding: 80px 40px 0;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div .list-header {
+  font-family: "Noto Sans";
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div .list-header h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div .list-header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div .list-tags {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content > div .list-tags li {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #3b3b3b;
+  padding: 4px 12px;
+  margin-right: 16px;
+  border-radius: 16px;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content .full-introduction {
+  display: inline-block;
+  width: 176px;
+  padding: 16px 0;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 5px;
+  border: none;
+}
+.introduction .introduction-lists .list-li.two .li-container .left-content .list-content .full-introduction span {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Noto Sans";
+}
+.introduction .introduction-lists .list-li.three .li-container {
+  display: flex;
+  justify-content: space-between;
+}
+.introduction .introduction-lists .list-li.three .li-container .left-content {
+  width: 721px;
+  padding-top: 176px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content {
+  padding: 200px 0;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content {
+  display: flex;
+  flex-direction: column;
+  width: 526px;
+  height: 400px;
+  padding: 80px 40px 0;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div .list-header {
+  font-family: "Noto Sans";
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div .list-header h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div .list-header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div .list-tags {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content > div .list-tags li {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #3b3b3b;
+  padding: 4px 12px;
+  margin-right: 16px;
+  border-radius: 16px;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content .full-introduction {
+  display: inline-block;
+  width: 176px;
+  padding: 16px 0;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 5px;
+  border: none;
+}
+.introduction .introduction-lists .list-li.three .li-container .right-content .list-content .full-introduction span {
   color: #FFF;
   font-size: 20px;
   font-weight: 700;
@@ -271,4 +424,111 @@
 }
 .introduction .introduction-lists .list-li:nth-of-type(1) {
   background-image: url("./images/introduction1.jpg");
+}
+.introduction .introduction-lists .list-li:nth-of-type(2) {
+  background-image: url("./images/introduction2.png");
+  background-color: #c0effe;
+}
+.introduction .introduction-lists .list-li:nth-of-type(3) {
+  background-image: url("./images/introduction3.png");
+}
+
+.service {
+  padding-top: 120px;
+  height: 800px;
+}
+.service .service-content {
+  position: relative;
+}
+.service .service-content .service-title {
+  width: 372px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 80px;
+  color: #3b3b3b;
+}
+.service .service-content .service-title .service-title-before,
+.service .service-content .service-title .service-title-after {
+  width: 100px;
+  position: relative;
+}
+.service .service-content .service-title .service-title-before::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #c1c1c1;
+}
+.service .service-content .service-title .service-title-before::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.service .service-content .service-title .service-title-after::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 1px solid #c1c1c1;
+}
+.service .service-content .service-title .service-title-after::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.service .service-content .service-title h3 {
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 39px;
+  letter-spacing: 0.12em;
+}
+.service .service-content .service-lists {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.service .service-content .service-lists li {
+  width: 306px;
+  height: 306px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(315deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%);
+}
+.service .service-content .service-lists li img {
+  width: 80px;
+  display: block;
+  margin-bottom: 24px;
+}
+.service .service-content .service-lists li h4 {
+  font-family: "Noto Sans";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #ffffff;
 }/*# sourceMappingURL=index.css.map */
