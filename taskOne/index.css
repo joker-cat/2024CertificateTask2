@@ -354,8 +354,12 @@
   justify-content: space-between;
 }
 .introduction .introduction-lists .list-li.three .li-container .left-content {
-  width: 721px;
+  width: 55%;
+  max-width: 721px;
   padding-top: 176px;
+}
+.introduction .introduction-lists .list-li.three .li-container .left-content img {
+  width: 100%;
 }
 .introduction .introduction-lists .list-li.three .li-container .right-content {
   padding: 200px 0;
@@ -434,8 +438,7 @@
 }
 
 .service {
-  padding-top: 120px;
-  height: 800px;
+  padding: 120px 0;
 }
 .service .service-content {
   position: relative;
@@ -508,6 +511,9 @@
 .service .service-content .service-lists {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
   list-style-type: none;
 }
 .service .service-content .service-lists li {
@@ -531,4 +537,34 @@
   font-weight: 700;
   line-height: 42px;
   color: #ffffff;
+}
+.service .service-content .help-more {
+  width: 280px;
+  margin: 0 auto;
+  font-family: "Noto Sans";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+}
+.service .service-content .help-more p {
+  margin-bottom: 40px;
+}
+.service .service-content .help-more button {
+  padding: 16px 32px;
+  border-radius: 5px;
+  background: rgb(0, 0, 0);
+}
+.service .service-content .help-more button span {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #ffffff;
+}
+.service .service-content .service-bg {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=index.css.map */
