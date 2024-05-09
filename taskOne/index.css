@@ -201,6 +201,8 @@
 .index-page .main .introduction .introduction-lists .list-li.one .li-container {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 3;
 }
 .index-page .main .introduction .introduction-lists .list-li.one .li-container .list-image {
   max-width: 55%;
@@ -429,6 +431,17 @@
 }
 .index-page .main .introduction .introduction-lists .list-li:nth-of-type(1) {
   background-image: url("./images/introduction1.jpg");
+  position: relative;
+}
+.index-page .main .introduction .introduction-lists .list-li:nth-of-type(1)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #272727;
+  opacity: 0.4;
 }
 .index-page .main .introduction .introduction-lists .list-li:nth-of-type(2) {
   background-image: url("./images/introduction2.png");
