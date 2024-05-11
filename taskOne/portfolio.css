@@ -231,9 +231,10 @@ main {
 }
 .articles .article-setting .article-list .img {
   display: block;
+  width: 100%;
+  margin-bottom: 16px;
   border: 1px solid #F1F1F1;
   border-radius: 8px;
-  margin-bottom: 16px;
 }
 .articles .article-setting .article-list .info {
   padding: 0 16px;
@@ -261,7 +262,7 @@ main {
   font-weight: 400;
   line-height: 24px;
   padding: 4px 12px;
-  margin-right: 16px;
+  margin-right: 12px;
   color: #3B3B3B;
   background-color: #F1F1F1;
   border-radius: 16px;
@@ -371,4 +372,86 @@ main {
   color: #3b3b3b;
   background-color: #fff;
   border: 1px solid #c1c1c1;
+}
+
+@media screen and (max-width: 1440px) {
+  .header-content {
+    max-width: 992px;
+  }
+  .articles {
+    max-width: 992px;
+    padding: 80px 5%;
+  }
+  .articles .article-setting .article-list {
+    width: 50%;
+    padding: 0 10px;
+  }
+  .footer .footer-content {
+    max-width: 992px;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .articles .article-setting .article-list .info .title {
+    font-size: clamp(24px, 1.5vw, 28px);
+  }
+  .articles .article-setting .article-list .info .tags .tag {
+    font-size: clamp(12px, 1.5vw, 16px);
+  }
+  .page-group .page {
+    padding: 0 12px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slogan {
+    padding: 40px;
+  }
+  .slogan .slogan-concept {
+    width: 100%;
+    padding: 64px 5% 40px;
+    margin: 0;
+    font-size: clamp(18px, 5vw, 24px);
+  }
+  .slogan .slogan-concept::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slogan .slogan-concept::after {
+    display: none;
+  }
+  .slogan .other-service {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slogan .other-service .service-2B,
+  .slogan .other-service .service-2C {
+    font-size: 20px;
+  }
+  .slogan .other-service .service-2B {
+    margin-bottom: 20px;
+  }
+  .articles {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+  .articles .article-setting {
+    align-items: center;
+  }
+  .articles .article-setting .article-list {
+    width: 100%;
+    max-width: inherit;
+  }
+  .footer .footer-content {
+    flex-direction: column;
+  }
+  .footer .footer-content .contact {
+    padding: 40px;
+  }
+  .footer .footer-content .community {
+    padding: 40px 0;
+  }
 }/*# sourceMappingURL=portfolio.css.map */

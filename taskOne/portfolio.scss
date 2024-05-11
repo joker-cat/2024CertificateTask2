@@ -28,6 +28,10 @@ body {
   margin: 0 auto;
 }
 
+@mixin container-992 {
+  max-width: 992px;
+}
+
 @mixin dummy-dom {
   position: absolute;
   width: 8px;
@@ -296,9 +300,10 @@ main {
         //所以得設定圖片寬度為100%
         //display: block消除底下有空白
         display: block;
+        width: 100%;
+        margin-bottom: 16px;
         border: 1px solid #F1F1F1;
         border-radius: 8px;
-        margin-bottom: 16px;
       }
 
       .info {
@@ -325,7 +330,7 @@ main {
           .tag {
             @include fs-6;
             padding: 4px 12px;
-            margin-right: 16px;
+            margin-right: 12px;
             color: #3B3B3B;
             background-color: #F1F1F1;
             border-radius: 16px;
@@ -364,7 +369,6 @@ main {
     }
   }
 }
-
 
 .footer {
   @include background-image-setting;
@@ -431,18 +435,19 @@ main {
           font-weight: 700;
           line-height: 30px;
         }
+
         &:nth-of-type(1) {
           color: #fff;
           background-color: #000;
         }
-  
+
         &:nth-of-type(2) {
           margin: 24px 0;
           color: #3b3b3b;
           background-color: #fff;
           border: 1px solid #c1c1c1
         }
-  
+
         &:nth-of-type(3) {
           color: #3b3b3b;
           background-color: #fff;
@@ -454,212 +459,130 @@ main {
 }
 
 
+@media screen and (max-width: 1440px) {
+  .header-content {
+    @include container-992;
+  }
 
-// @media screen and (max-width: 1440px) {
-//   .main-content {
-//     .article {
-//       width: 996px;
+  .articles {
+    @include container-992;
+    padding: 80px 5%;
 
-//       .article-set {
-//         justify-content: space-around;
+    .article-setting {
+      .article-list {
+        width: 50%;
+        padding: 0 10px;
+      }
+    }
+  }
 
-//         .article-list {
-//           width: 45%;
-//         }
-//       }
-//     }
-//   }
+  .footer {
 
-//   .portfolio-page .footer {
+    .footer-content {
+      @include container-992;
+      padding: 0 20px;
+    }
+  }
+}
 
-//     .footer-content {
-//       width: 100%;
-//       max-width: 996px;
-//     }
-//   }
-// }
+// 平板
+@media screen and (max-width: 992px) {
 
-// @media screen and (max-width: 992px) {
-//   .main-content {
-//     .article {
-//       width: 552px;
-//       padding: 80px 0;
+  .articles {
+    .article-setting {
+      .article-list {
+        .info {
+          .title {
+            font-size: clamp(24px, 1.5vw, 28px);
+          }
 
-//       .article-set {
-//         display: flex;
-//         flex-direction: column;
+          .tags {
+            .tag {
+              font-size: clamp(12px, 1.5vw, 16px);
+            }
+          }
+        }
+      }
+    }
+  }
 
-//         .article-list {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
+  .page-group {
+    .page {
+      padding: 0 12px;
+      font-size: 20px;
+    }
+  }
+}
 
-//   .portfolio-page .footer {
+// 手機
+@media screen and (max-width: 768px) {
 
-//     .footer-content {
-//       padding: 40px 0;
-//       justify-content: space-around;
 
-//       .right-footer {
-//         padding: 0;
-//         width: 250px;
+  .slogan {
+    padding: 40px;
 
-//         li {
-//           height: 64px;
-//           padding: 5px;
-//         }
-//       }
-//     }
-//   }
-// }
+    .slogan-concept {
+      width: 100%; //要蓋過370px設定
+      padding: 64px 5% 40px;
+      margin: 0;
+      ;
+      font-size: clamp(18px, 5vw, 24px);
 
-// @media screen and (max-width: 768px) {
-//   .xxl-show {
-//     display: none !important;
-//   }
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
-//   .md-show {
-//     display: show;
-//   }
+      &::after {
+        display: none;
+      }
+    }
 
-//   .header-container {
-//     height: auto;
-//     padding: 10px;
-//     display: flex;
-//     justify-content: space-between;
+    .other-service {
+      width: 80%;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
 
-//     .logo-image {
-//       position: relative;
-//       top: 0;
-//       left: 0;
-//       transform: none;
-//     }
+      .service-2B,
+      .service-2C {
+        font-size: 20px;
+      }
 
-//     .nav-lists {
-//       position: absolute;
-//       z-index: 2;
-//       top: 100%;
-//       left: 0;
-//       right: 0;
-//       display: flex;
-//       flex-direction: column;
-//       background-color: #fff;
-//       padding: 0;
+      .service-2B {
+        margin-bottom: 20px;
+      }
+    }
+  }
 
-//       li {
-//         font-size: 20px;
-//         line-height: 30px;
-//       }
-//     }
-//   }
+  .articles {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
 
-//   .main-content {
+    .article-setting {
+      align-items: center;
 
-//     .slogan {
-//       padding: 40px 0 80px;
-//       background-color: #fafafa;
+      .article-list {
+        width: 100%;
+        max-width: inherit;
+      }
+    }
+  }
 
-//       .slogan-concept {
-//         width: 100%;
-//         padding: 0 37.5px;
-//         margin-bottom: 24px;
-//         position: relative;
-//         display: flex;
+  .footer {
 
-//         &::before {
-//           left: 10%;
-//           width: 64px;
-//           height: 64px;
-//         }
-
-//         &::after {
-//           width: 64px;
-//           height: 64px;
-//           right: 10%;
-//         }
-
-//         h2 {
-//           width: 70%;
-//           height: auto;
-//           min-width: 300px;
-//           margin: auto;
-//           text-align: center;
-//           line-height: 30px;
-//           font-size: 20px;
-//         }
-//       }
-
-//       .slogan-other-service {
-//         width: 70%;
-//         min-width: 300px;
-//         flex-direction: column;
-//         align-items: center;
-
-//         .left-other-service {
-//           margin-bottom: 20px;
-
-//           .h3-2B {
-//             line-height: 24px;
-//             font-size: 16px;
-
-//           }
-//         }
-//       }
-//     }
-
-//     .article {
-//       width: 100%;
-//       margin: 0 auto;
-//       padding: 80px 0;
-
-//       .article-set {
-//         align-items: center;
-
-//         .article-list {
-//           width: 100%;
-
-//           .article-info {
-//             .tags-content {
-//               .article-tags {
-//                 margin-right: 8px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   .portfolio-page .footer {
-
-//     .footer-content {
-//       padding: 40px 0;
-//       flex-direction: column;
-
-//       .left-footer {
-//         text-align: center;
-//         margin-bottom: 40px;
-
-//         img {
-//           margin: 0 auto 24px;
-//         }
-//       }
-
-//       .right-footer {
-//         padding: 0;
-//         width: 250px;
-
-//         li {
-//           height: 64px;
-//           padding: 5px;
-//         }
-//       }
-//     }
-//   }
-
-// }
+    .footer-content {
+      flex-direction: column;
+      .contact{
+        padding: 40px;
+      }
+      .community {
+        padding: 40px 0;
+      }
+    }
+  }
+}
 
 // @media screen and (max-width: 768px) {
 //   .main-content {
