@@ -64,6 +64,7 @@ header {
 .header-content .nav-routers li .dummy-dom1,
 .header-content .nav-routers li .dummy-dom2 {
   position: absolute;
+  z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -422,17 +423,34 @@ main {
   }
   .header-content .nav-toggle {
     display: block;
+    font-size: 0;
+  }
+  .header-content .nav-toggle:hover {
+    cursor: pointer;
+  }
+  .header-content .nav-toggle:hover .burger {
+    display: none;
+  }
+  .header-content .nav-toggle:hover .close {
+    display: block;
+  }
+  .header-content .nav-toggle:hover + nav {
+    z-index: 1;
   }
   .header-content .nav-toggle .close {
     display: none;
   }
   .header-content nav {
+    padding-top: 30px;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    top: 100%;
+    z-index: -1;
     background-color: #fff;
-    z-index: 2;
+  }
+  .header-content nav:hover {
+    z-index: 1;
   }
   .header-content nav .nav-routers {
     padding: 12px 0;
@@ -487,11 +505,15 @@ main {
   }
   .footer .footer-content {
     flex-direction: column;
-  }
-  .footer .footer-content .contact {
     padding: 40px;
   }
+  .footer .footer-content .contact {
+    margin-bottom: 40px;
+  }
+  .footer .footer-content .contact img {
+    margin: 0 auto 24px;
+  }
   .footer .footer-content .community {
-    padding: 40px 0;
+    padding: 0;
   }
 }/*# sourceMappingURL=portfolio.css.map */
