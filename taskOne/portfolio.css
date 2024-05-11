@@ -11,6 +11,13 @@ body {
   font-family: "Noto Sans TC", sans-serif;
 }
 
+.nav-toggle {
+  display: none;
+}
+.nav-toggle .close {
+  display: none;
+}
+
 header {
   border-bottom: 1px solid #f1f1f1;
 }
@@ -404,6 +411,39 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+  .header-content .header-h1 {
+    position: unset;
+    transform: translateY(0%);
+  }
+  .header-content .nav-toggle {
+    display: block;
+  }
+  .header-content .nav-toggle .close {
+    display: none;
+  }
+  .header-content nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .header-content nav .nav-routers {
+    padding: 12px 0;
+    display: inherit;
+    text-align: center;
+  }
+  .header-content nav .nav-routers li .router-position-768 {
+    padding: 4px 8px;
+    position: relative;
+    display: inline-block;
+  }
   .slogan {
     padding: 40px;
   }

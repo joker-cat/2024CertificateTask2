@@ -22,6 +22,15 @@ body {
   font-family: $default-fontfamily;
 }
 
+.nav-toggle {
+  display: none;
+
+  .close {
+    display: none;
+  }
+}
+
+
 @mixin container-1296 {
   width: 100%;
   max-width: 1296px;
@@ -516,7 +525,47 @@ main {
 
 // 手機
 @media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 12px;
 
+    .header-h1 {
+      position: unset;
+      transform: translateY(0%);
+    }
+
+    .nav-toggle {
+      display: block;
+
+      .close {
+        display: none;
+      }
+    }
+
+    nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background-color: #fff;
+      z-index: 2;
+
+      .nav-routers {
+        padding: 12px 0;
+        display: inherit;
+        text-align: center;
+
+        li {
+          .router-position-768 {
+            padding: 4px 8px;
+            position: relative;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 
   .slogan {
     padding: 40px;
@@ -574,37 +623,14 @@ main {
 
     .footer-content {
       flex-direction: column;
-      .contact{
+
+      .contact {
         padding: 40px;
       }
+
       .community {
         padding: 40px 0;
       }
     }
   }
 }
-
-// @media screen and (max-width: 768px) {
-//   .main-content {
-//     .slogan {
-
-//       .slogan-concept {
-//         padding: 64px 0 0 0;
-
-//         &::before {
-//           top: 0;
-//           left: 50%;
-//           transform: translateX(-50%);
-//         }
-
-//         &::after {
-//           display: none;
-//         }
-
-//         h2 {
-//           margin: 0 auto 40px;
-//         }
-//       }
-//     }
-//   }
-// }
