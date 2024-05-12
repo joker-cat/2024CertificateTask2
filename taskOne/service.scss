@@ -1017,6 +1017,9 @@ header {
   }
 
   .service {
+    .service-title{
+      width: 100%;
+    }
     .service-lists {
       flex-direction: column;
 
@@ -1028,6 +1031,9 @@ header {
 
   .process {
     .process-content {
+      .process-title{
+        width: 100%;
+      }
       >ul {
         padding: 0 16px;
         width: 100%;
@@ -1050,6 +1056,9 @@ header {
   }
 
   .price {
+    .price-title {
+      width: 100%;
+    }
     .plans {
       min-width: 90%;
 
@@ -1069,6 +1078,9 @@ header {
 
   .cases {
     .case-content {
+      .case-title {
+        width: 100%;
+      }
       .case-setting {
         padding: 0 16px;
         flex-direction: column;
@@ -1089,6 +1101,9 @@ header {
 
   .QA {
     .qa-content {
+      .qa-title {
+        width: 100%;
+      }
       .qa-list {
         padding: 0 16px;
         grid-template-columns: 1fr;
