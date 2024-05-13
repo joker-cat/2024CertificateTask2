@@ -144,6 +144,11 @@ main {
 .slogan .slogan-concept p {
   margin-bottom: 16px;
 }
+.slogan .slogan-concept p span {
+  background-image: url("./images/Vector.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
 .slogan .slogan-concept::before {
   content: "";
   position: absolute;
