@@ -5,13 +5,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
+  text-decoration: none;
+  list-style: none;
   font-family: "Noto Sans TC", sans-serif;
 }
 
-main {
+.main-bg {
   background-color: #FAFAFA;
 }
 
