@@ -1,0 +1,52 @@
+
+@mixin container-1296 {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+@mixin dummy-dom {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+@mixin background-image-setting {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin fs-4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+@mixin fs-5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin fs-6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin h4-Bootstrap-heading {
+  color: #1E1E1E;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+@mixin h5-Bootstrap-heading {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
